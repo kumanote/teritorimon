@@ -1,0 +1,21 @@
+[package]
+name = "teritoricli"
+version = "0.1.0"
+authors = ["Hiroki Tanaka <hiroki.tanaka@kumano-te.com>"]
+license = "kumanote,LLC. all rights reserved."
+publish = false
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = { version = "1.0", features = ["backtrace"] }
+once_cell = "1.10.0"
+futures = "0.3"
+
+logger = { version = "0.1.0", git = "https://github.com/kumanote/logger-rs", branch = "main", features = ["airbrake"] }
+teritori-grpc-client = { version = "1.3.0", git = "https://github.com/kumanote/teritori-grpc-client-rs", tag = "v1.3.0" }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+checker = { path = "../checker" }

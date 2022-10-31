@@ -1,0 +1,32 @@
+# check interval
+interval = '10s'
+
+[[checkers]]
+teritori_grpc_scheme = 'http'
+teritori_grpc_host = '127.0.0.1'
+teritori_grpc_port = 9090
+# see priv_validator_key.json
+validator_account = '<YOUR-NODE-HEX-ADDRESS>'
+# this value starts with 'cosmosvaloper'
+validator_address = '<YOUR-TERITORI-VALIDATOR-ADDRESS>'
+# check if the node is syncing or not.
+syncing = true
+# alert when new proposal transaction has been submitted and committed.
+new_proposal = true
+# alert if the validator account missed to sign a block.
+missed_block = true
+# alert if there are 2 missed blocks per 10 blocks.
+missed_block_threshold = '2/10'
+# alert if the validator is jailed and its status is not "BONDED".
+validator_status = true
+# alert if there is any slashes.
+slashes = true
+
+[logger]
+chan_size = 1000
+is_async = true
+level = "INFO"
+airbrake_host = 'https://api.airbrake.io'
+airbrake_project_id = '<YOUR-AIRBRAKE-PROJECT-ID>'
+airbrake_project_key = '<YOUR-AIRBRAKE-PROJECT-KEY>'
+airbrake_environment = '<YOUR-AIRBRAKE-ENVIRONMENT>'

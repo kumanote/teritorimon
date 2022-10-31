@@ -1,0 +1,38 @@
+# lock
+*.lock
+
+# pids
+*.pid
+*.seed
+
+# for Windows
+Thumbs.db
+Desktop.ini
+
+# for OSX
+.DS_Store
+
+# swp
+*.swp
+
+# ide
+.idea/
+
+# env
+.envrc
+
+# GDB related
+**/.gdb_history
+
+# Rust specific ignores
+target/
+Cargo.lock
+
+# local config
+*.toml
+!Cargo.toml
+!rust-toolchain.toml
+
+# local custom certificates
+certs/*.crt
+!certs/README.md

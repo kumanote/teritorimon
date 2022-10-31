@@ -1,0 +1,27 @@
+[package]
+name = "checker"
+version = "0.1.0"
+authors = ["Hiroki Tanaka <support@kumano-te.com>"]
+license = "MIT"
+publish = false
+edition = "2021"
+
+[dependencies]
+anyhow = { version = "1.0", features = ["backtrace"] }
+thiserror = "1.0"
+futures = "0.3"
+sha2 = "0.10.2"
+subtle-encoding = { version = "0.5", default-features = false, features = ["bech32-preview", "base64", "hex"] }
+
+logger = { version = "0.1.0", git = "https://github.com/kumanote/logger-rs", branch = "main", features = ["airbrake"] }
+teritori-grpc-client = { version = "1.3.0", git = "https://github.com/kumanote/teritori-grpc-client-rs", tag = "v1.3.0" }
+
+channel = { path = "../channel" }
+teritoricli = { path = "../teritoricli" }
+crypto = { path = "../crypto" }
+config = { path = "../config" }
+
+[dev-dependencies]
+
+[features]
+default = []

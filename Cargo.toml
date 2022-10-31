@@ -1,0 +1,19 @@
+[workspace]
+
+members = [
+    "cmd",
+    "config",
+    "channel",
+    "checker",
+    "teritoricli",
+    "crypto",
+]
+
+[profile.dev]
+debug = true
+
+[profile.release]
+debug = false
+
+[profile.bench]
+debug = false
