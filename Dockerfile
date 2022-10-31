@@ -2,7 +2,7 @@
 FROM alpine:3.16 as builder
 
 # install utilities
-RUN apk add --update alpine-sdk cmake clang protoc
+RUN apk add --update alpine-sdk cmake clang protoc protobuf-dev
 RUN apk add --no-cache ca-certificates
 
 ENV RUSTUP_HOME=/usr/local/rustup \
